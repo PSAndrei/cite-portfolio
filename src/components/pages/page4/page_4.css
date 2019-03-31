@@ -1,0 +1,62 @@
+.input_data {
+    width: 40%;
+    margin: 5px 5px;
+    display: inline-block;
+    background: linear-gradient(270deg, rgb(51, 62, 97) 10%, rgb(83, 94, 128) 100%);
+    border: none;
+    border-radius: 10px;
+    height: 50px;
+    padding-left: 5%;
+    box-sizing: border-box;
+    color: white;
+    float: right;
+    transition: box-shadow 0.5s;
+    outline:none;
+    overflow: hidden;
+
+}
+
+.input_data_button {
+    padding-left: 0%;
+    width: calc(80% + 10px);
+}
+
+.textarea_data {
+    transition: box-shadow 0.5s;
+    resize: none;
+    width: calc(80% + 10px);
+    margin: 5px 5px;
+    float: right;
+    display: inline-block;
+    background: linear-gradient(270deg, rgb(51, 62, 97) 10%, rgb(83, 94, 128) 100%);
+    border: none;
+    border-radius: 10px;
+    height: 150px;
+    padding: 5%;
+    box-sizing: border-box;
+    color: white;
+    outline:none;
+    overflow: hidden;
+}
+
+.textarea_data:focus{
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.input_data:focus{
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 450px) {
+    .layout_contacts{
+        margin-top: 0px;
+        height: 100vh;
+        padding-top: 90px;
+    }
+
+    .textarea_data {
+        height: 250px;
+    }
+ 
+  
+}

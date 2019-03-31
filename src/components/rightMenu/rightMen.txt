@@ -1,0 +1,62 @@
+import React, { PureComponent } from "react";
+import "./rightMenu.css";
+
+class RightMenu extends PureComponent {
+    constructor(props) {
+        super(props);
+        this.state = {
+            menuItems: [
+                {
+                    name: 'главная',
+                    id: 'page_1',
+                    activity: true
+                },
+                {
+                    name: 'скилы',
+                    id: 'page_2',
+                    activity: false
+                },
+                {
+                    name: 'lalalala',
+                    id: 'page_3',
+                    activity: false
+                },
+                {
+                    name: 'обратная связь',
+                    id: 'page_4',
+                    activity: false
+                },
+            ],
+            // curentPage: {
+            //     name: 'главная',
+            //     id: 'page_1',
+            //     activity: true
+            // },
+        };
+    }
+    render() {
+        return (
+            <div className="component-rightMenu">
+                <ul>
+                    {this.state.menuItems.map(item => {
+                        return <li 
+                        key={item.id.toString()} 
+                        id={item.id} 
+                        onClick={this.pageChange.bind(this)}>
+                            {item.name}
+                        </li>
+                    })}
+                </ul>
+            </div>
+        );
+    }
+
+    pageChange(event) {
+       this.props.updatePage(event.target.id);
+    }
+}
+
+RightMenu.propTypes = {
+};
+export default RightMenu;
+

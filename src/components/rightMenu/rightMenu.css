@@ -1,0 +1,247 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.button {
+    font-family: Montserrat;
+    /* background: red; */
+    background: linear-gradient(270deg, rgb(51, 62, 97) 10%, rgb(83, 94, 128) 100%);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    z-index: 2;
+    width: 75%;
+    position: relative;
+    margin-top: 20px;
+    /* � ������� */
+    overflow: hidden;
+    /* � ������� (�����)*/
+}
+/* � ������� */
+.button:hover {
+    cursor: pointer;
+}
+.button:hover span{
+    color:red; 
+}
+
+.social_item i{
+    color:white;
+    line-height: 25px;
+}
+
+.button:before { 
+    content: ''; 
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+    width: 100%; 
+    height: 100%; 
+    background:linear-gradient(270deg, rgb(51, 62, 97) 10%, rgb(83, 94, 128) 100%);
+    opacity: 1; 
+    transition: width 0.5s;
+    z-index: -1; 
+    border-radius: 10px;
+} 
+.button:hover:before { 
+    width: 500%;  
+}
+/* � ������� (�����)*/
+
+
+.button span{
+    display: inline-block;
+    font-size: 10px;
+    color: white;
+    line-height: 50px;
+    margin-left: 10%;
+/* � ������� */
+    transition: color 0.5s;
+/* � ������� (�����)*/
+}
+
+.buttons_lay{
+    display: flex;
+    align-items: flex-start;
+    flex-flow: column wrap;
+    justify-content: flex-end;
+    padding-bottom: 20px;
+    height: 60%;
+    bottom: 0;
+    position: absolute;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    width: 100%;
+}
+
+.current_social {
+    display: flex;   
+    justify-content: flex-end; 
+   
+}
+
+.e-mail_item {
+    display: block;
+    line-height: 100%;
+}
+
+.email_social_item {
+    border-radius: 100%;
+    height: 25px;
+    width: 25px;
+    border: 1px solid white;
+    /* justify-content: center;
+	align-items: center;
+    display: inline-flex; */
+    margin-left: 10px;
+    margin-right: 10px;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    line-height: 25px;
+}
+
+
+.gmail_social {
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+}
+
+header {
+    height: 57%;
+    min-height: 500px;
+    width: 20%;
+    position: fixed;
+    background: #BC2964;
+    z-index: 1;
+    right: 135px; 
+    top: 0;
+}
+
+
+.mail_lay{
+    margin-top: 20px;
+    float: right;
+    margin-right: 21%;
+}
+
+
+
+.social {
+    position: relative;
+}
+
+.social_item {
+    border-radius: 100%;
+    height: 25px;
+    width: 25px;
+    border: 1px solid white;
+    justify-content: center;
+	align-items: center;
+    display: inline-flex;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    float: right;   
+    font-size: 12px;
+}
+
+.social_item_post {
+    height: 15px;
+}
+
+.social span {
+    font-size: 10px;
+    color: white;
+    align-self: center;
+}
+#closeMenu{
+    display: none;
+}
+
+#burgerMenu{
+    display: none;
+}
+
+
+
+@media (max-width: 450px) {
+    header {
+        height: 100%;
+        min-height: 500px;
+        width: 100%;
+        position: fixed;
+        background: #BC2964;
+        z-index: 1;
+        right: 0px; 
+        
+    }
+
+    .header_mobile{
+        left: -100%;
+        transition: left 0.5s;
+    }
+
+    .header_mobile_open{
+        left: 0%;
+        transition: left 0.5s;
+    }
+
+    .button {
+        /* background: red; */
+        background: linear-gradient(270deg, rgb(51, 62, 97) 10%, rgb(83, 94, 128) 100%);
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+        z-index: 2;
+        width: 80%;
+        position: relative;
+        margin-top: 20px;
+        margin-top: 20px;
+        overflow: hidden;
+        margin: 50px auto;
+    }
+    .button span {
+        display: inline-block;
+        font-size: 20px;
+        color: white;
+        line-height: 60px;
+        margin-left: 10%;
+        transition: color 0.5s;
+    }
+    .buttons_lay{
+        display: block;
+        height: 80%;
+        bottom: 0;
+        position: absolute;
+        margin-bottom: 10px;
+        margin-left: 0px;
+        width: 100%;
+    }
+    .mail_lay {
+        margin-top: 20px;
+        /* float: right; */
+        /* padding: 5px 25px 10px 8px; */
+        margin-right: 10%;
+    }
+    #closeMenu{
+        display: block;
+        position: absolute;
+        top:20px;
+        left:20px;
+        color: white;
+        font-size: 20px;
+    }
+    #burgerMenu{
+        display: block;
+        position: fixed;
+        top:20px;
+        left:20px;
+        color: white;
+        font-size: 20px;
+        z-index: 1;
+    }
+  
+}
+
